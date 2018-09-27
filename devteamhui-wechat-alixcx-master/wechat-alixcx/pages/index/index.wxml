@@ -1,0 +1,103 @@
+
+<view style='width:750rpx;'>
+<view class="swiper-tab">  
+ <scroll-view scroll-x class='scroll-img'>
+     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">推荐</view> 
+ <block wx:for="{{activity_type}}">
+    <view id="{{item.id}}" class="swiper-tab-list {{currentTab==(index+1) ? 'on' : ''}}" data-current="{{index+1}}" bindtap="swichNav">{{item.title}}</view>  
+</block>
+</scroll-view>       
+</view>  
+  
+ <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1370px" bindchange="bindChange">
+    <!-- 推荐开始 -->  
+   <!-- 轮播开始 -->  
+    <swiper-item class="swiper-item">  
+      <view class='section__ctn'>
+       <view class='head-img-bg'>
+         <swiper style='height:382rpx' indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">  
+          <block wx:for="{{banner}}">  
+           <swiper-item>  
+              <navigator url="../hot/hot?id={{item.id}}" hover-class="navigator-hover" style="text-align:center;margin:40rpx 0px;"> 
+               <image src="{{item.url}}" class='head-img'/>  
+              </navigator>  
+           </swiper-item>  
+          </block> 
+         </swiper>
+        </view>
+       </view>  
+         <!-- 轮播结束 --> 
+       <!-- 清享卡四图开始 -->  
+  <view class="body">
+  <view>
+    <view class='section section_gap icon' wx:for="{{array}}" wx:for-item="item">
+     <navigator url="../aboutjk/aboutjk?id={{id}}" hover-class="navigator-hover"> 
+        <image mode='aspectFit' src="{{item.url}}" class='img-icon'/>  
+     </navigator>
+     <view style='font-size:12px;'>{{item.text}}</view>
+    </view>
+</view>
+<!-- 清享卡四图结束 -->  
+  <!-- 活动分类开始标题 -->
+<view class='section section_gap' wx:for="{{rec}}" wx:for-item="item" style='float:left;margin-top:30px'>
+  <image src="{{item.url}}" style='display:inline-block; width:12px;height:40px;margin-left:0px;' />
+  <view style='font-size:34rpx;float:right;margin:10px;'>{{item.txt}}</view>
+</view>
+  <!-- 活动分类题结束 -->
+ 
+  <!-- 活动分类开始 -->
+<view class="introduce-tab">  
+<scroll-view scroll-x class="scroll-active">
+ <block wx:for="{{activity_type}}">
+    <view style='display:inline-block'>
+        <navigator url="{{item.url}}" hover-class="navigator-hover"> 
+        <image src="{{item.thumb}}" class='active-img'/>  
+        </navigator>
+     <view class="active-dex" style='margin-left:-80rpx;'>{{item.title}}</view>
+   </view>
+  </block>
+</scroll-view>     
+</view> 
+  <!-- 活动分类结束 -->
+  <!-- 热门活动标题开始 -->
+<view class='section section_gap' wx:for="{{rec}}" wx:for-item="item" style='float:left;margin-top:30px'>
+  <image src="{{item.url}}" style='display:inline-block; width:12px;height:40px;margin-left:0px;' />
+  <view style='font-size:34rpx;float:right;margin:10px;color:#1f2121'>{{item.txt1}}</view>
+</view>      
+  <!-- 热门活动标题结束 -->
+
+  <!-- 热门活动开始 -->
+<view>  
+  <block wx:for="{{hot}}">
+    <view style='display:inline-block'>
+        <view class="hot-des">{{item.title}}</view>
+        <navigator url="../hot/hot?id={{item.id}}" hover-class="navigator-hover"> 
+        <image src="{{item.thumb}}" class='hot-img'/>  
+        </navigator>
+  </view>
+   </block>
+</view> 
+  <!-- 热门活动结束 -->
+</view>
+
+</swiper-item> 
+  <!-- 推荐结束 --> 
+     <!-- 玩酷 -->  
+    <swiper-item>
+    </swiper-item>  
+    <!-- 少女心 -->  
+    <swiper-item>  
+      <view></view>  
+    </swiper-item>  
+     <!-- 优质餐厅 -->  
+    <swiper-item>  
+      <view></view>  
+    </swiper-item> 
+     <!-- 优质 -->   
+    <swiper-item>  
+      <view></view>  
+    </swiper-item>  
+</swiper>  
+<!-- footer结束-->
+</view>

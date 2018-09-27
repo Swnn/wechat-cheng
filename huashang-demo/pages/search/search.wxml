@@ -1,0 +1,23 @@
+<import src="../../utils/wxParse/wxParse.wxml" />
+<!--搜索框-->
+  <view class='search'>
+  <icon class='search-icon' type='search'></icon>
+  <input class='search-input' placeholder='请输入关键字搜索' bindconfirm='search'></input>
+  </view>
+  <view class='mid-bg'></view>
+   <view class='search-res' style="display:{{display}}">
+   <button bindtap='cancel' class='danger'>取消</button>
+   <block wx:for="{{list}}" wx:key="">
+    <view>id:{{item.id}}</view>
+    <view>标题:{{item.title}}</view>
+    <view>名称:{{item.address}}</view>
+    <view class='search-content'>
+     <template is="wxParse" data="{{wxParseData:article.nodes}}" /><!--解析content内容-->
+    </view>
+   </block>
+  <!--内容为null-->
+    <view style='display:{{display1}}'>
+      抱歉！没有该相关词
+    </view>
+
+   </view>

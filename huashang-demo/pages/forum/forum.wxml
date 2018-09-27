@@ -1,0 +1,69 @@
+<view>
+<!--头部轮播图片开始-->
+  <view>
+   <swiper  class='head-img' indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+    <block wx:for="{{zhantu}}" wx:key="">  
+     <swiper-item>  
+      <navigator> 
+       <image src="{{item.image_url}}" class='head-img' ></image>  
+      </navigator>  
+     </swiper-item>  
+    </block> 
+   </swiper>
+ </view>
+<!--头部轮播图片结束-->
+  <view class='add_dt' bindtap='Add_dis'>+添加新动态</view>
+
+<!--中间部分-->
+<view class='mid'>
+   <block wx:for="{{liuyan}}" wx:key="">
+   <!--循环每一部分-->
+    <view class='mid2'>
+      <image src="{{item.avatar}}" class='mid-headimg'/> 
+        <view class='mid-content'>
+           <text>{{item.nickname}}</text>
+           <text class='mid-txt'>{{item.content}}</text>
+           <view class='peitu'>
+            <block wx:for="{{item.tu}}" wx:key="">
+              <image src='{{item.url}}' class='liuyan-tu'></image>
+            </block>
+           </view> <!--小block前面的view-->
+           <view class='time-3icon'>
+          <text class='liuyan-time'>时间：{{item.time}}</text>
+          <view class='com-pra'>
+            <image class='com-pra-look' src='../images/论坛/L_10.png'></image><text class='icon-txt'>{{}}</text>
+            <image class='com-pra-praise' src='../images/论坛/L_11.png' bindtap='zan' data-id="{{item.id}}"></image><text class='icon-txt'>{{item.praise}}</text>
+            <image class='com-pra-commend' src='../images/论坛/L_12.png' bindtap='pinglun'data-id="{{item.id}}"></image><text class='icon-txt'>{{item.comments}}  </text>
+
+          </view>
+          </view><!--时间和后面三个小图标-->
+           <view>
+            <block wx:for="{{item.pinglun}}" wx:key="">
+             <view class='pinglun-content'>
+              <text>{{item.nickname}}：</text>
+              <text>{{item.content}}</text>
+              </view><!--评论内容-->
+            </block>
+           </view> <!--评论循环前面的view-->
+        </view><!--md-content-->
+    </view><!--mid2-->
+    </block><!--大循环-->
+</view><!--mid--> 
+
+</view>
+<!--底部固定-->
+
+
+<view class="tabbar">
+  <view class='hide' style='display:{{display}}'>
+    <input class='pl-txt' placeholder='请输入评论' bindconfirm='content'></input>
+    <button class='submit' bindtap='submit'>取消</button>
+  </view>
+  <button class="fix-call" >
+    <image class='call-img' src='../images/首页/t-02.png'></image>
+    拨打热线</button>
+  <button class='fix-gps'>
+  <image class='call-img' src='../images/首页/t_03.png'></image>
+  导航</button>
+</view>

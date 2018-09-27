@@ -1,0 +1,36 @@
+<view class='body'>
+<view class='up-bg'>
+ <image class='active-bgimg' src="{{thumb}}"/>
+ <view>
+ <image class='active-upimg'  src="../images/微信图片_20180704165241_03.png"/> 
+ <view class='img-des'>
+  <view class='img-des1'>{{title}}</view>
+      <navigator url='../detail/detail?id={{id}}' class='img-des2'>
+          <view class='img-des-txt'>查看详情</view>
+      </navigator>
+
+ </view>
+ </view>   
+</view>
+
+<!-- 热门活动标题开始 -->
+<view class='section section_gap' wx:for="{{rec}}" wx:for-item="item" style='float:left;margin-top:20rpx'>
+  <image src="{{item.url}}" style='display:inline-block; width:12px;height:40px;margin-left:0px;' />
+  <view style='font-size:34rpx;float:right;margin:10px;color:#1f2121'>{{item.txt1}}</view>
+</view>
+  <!-- 热门活动标题结束 -->
+
+  <!-- 热门活动开始 -->
+<view style='text-align:center;'>  
+  <block wx:for="{{banner}}">
+    <view style='display:inline-block;position:relative;margin-bottom:10px;'>
+        <navigator url="/pages/detail/detail?id={{item.id}}" hover-class="navigator-hover"> 
+        <image src="{{item.url}}" class='hot-img'/>  
+        </navigator>
+        <view class='hot-des'>{{item.position_name}}</view>
+   </view>
+   </block>
+</view> 
+  <!-- 热门活动结束 -->
+
+</view>

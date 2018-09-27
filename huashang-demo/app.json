@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/login_direct",
+    "pages/logs/logs",
+    "pages/forum/forum",
+    "pages/aboutour/aboutour",
+    "pages/xiangmu/xiangmu",
+    "pages/search/search",
+    "pages/Add_dt/add_dt",
+    "pages/add/add"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff5252",
+    "navigationBarTitleText": "华商分类广告",
+    "navigationBarTextStyle":"black"
+  }
+}

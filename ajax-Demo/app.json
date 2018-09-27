@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/demo/index",
+    "pages/login/login",
+    "pages/login/login_direct"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小程序前端底层框架",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  }
+}

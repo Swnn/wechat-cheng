@@ -1,0 +1,28 @@
+<view class='new'>
+  <view class='font-big font-color-deep biaot'>
+  </view>
+  <view class='inp-info'>
+    <view class='input1'>
+      <view class='t-left'>手机号</view>
+      <input class='in-center' type="number" placeholder='手机号码' bindinput='getphone' value="{{phone}}" maxlength='11'></input>
+      <view class='txt-right' bindtap='getyzm'> 获取验证码</view>
+      <text style="font-size:13px;margin-right:10px;width:58px;" hidden='{{tt}}'>{{time}}</text>
+
+    </view>
+    <view class='input1'>
+      <view class='t-left'>验证码</view>
+      <input class='in-center' type="number" placeholder='验证码' bindinput='getyzmstr' value='{{yzm}}'></input>
+    </view>
+    <!-- <view class='onekey'>
+      <button class='fixed-btn2' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键授权登录</button>
+    </view> -->
+    <view class='onekey'>
+      <button class='fixed-btn1' open-type='getUserInfo' bindgetuserinfo="get_user_info">确认登录</button>
+    </view>
+  </view>
+</view>
+
+<!-- <button class='fixed-btn' bindtap='login'>实名认证</button> -->
+<!-- <view class="home" bindtap='home'>
+  首页
+</view> -->

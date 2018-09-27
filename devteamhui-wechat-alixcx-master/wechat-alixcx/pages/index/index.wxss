@@ -1,0 +1,128 @@
+/**index.wxss**/
+
+view {
+  font-family: MicrosoftYaHei;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  height: 74rpx;
+  line-height: 74rpx;
+  display: inline-block;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  color: #777;
+  padding: 0 30rpx;
+}
+
+.head-img-bg {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 422rpx;
+}
+
+.scroll-img {
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.on {
+  color: #000;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+.swiper-item {
+  height: 150px;
+}
+
+.body {
+  width: 750rpx;
+  height: 1110rpx;
+}
+
+.head-img {
+  width: 690rpx;
+  height: 342rpx;
+  box-shadow: 100px 100px 20px #f2f2f2;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.img-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20px 20px 5px;
+  padding: 0px 10px;
+}
+
+.active-img {
+  width: 280rpx;
+  height: 160rpx;
+  margin: 0 0 0 30rpx;
+  position: relative;
+}
+
+.active-dex {
+  font-size: 32rpx;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 64rpx;
+  text-align: center;
+}
+
+.scroll-active {
+  width: 100%;
+  height: 330rpx;
+  white-space: nowrap;
+}
+
+.hot-title {
+  display: block;
+  font-size: 30rpx;
+  color: #575757;
+}
+
+.hot-des {
+  float: left;
+  font-size: 12px;
+  margin-top: 20rpx;
+}
+
+.hot-img {
+  padding: 0;
+  margin: 0;
+  width: 690rpx;
+  height: 350rpx;
+}
+.hot-image{
+  height: 300rpx;
+}
+/*
+**
+.play {
+  display: flex;
+  flex-direction: column;     //这两行是将文字一行显示
+  padding: 20rpx;
+}
+**
+*/

@@ -1,0 +1,43 @@
+<import src="../../utils/wxParse/wxParse.wxml" />
+<view>
+<!--头部view-->
+  <view class='head'>
+    <swiper class='head-title' indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+     <block wx:for="{{women}}" wx:key="">  
+        <swiper-item> 
+          <text>{{item.title}}</text>
+        </swiper-item>  
+    </block> 
+   </swiper>
+   <!-- <scroll-view scroll-y class='news-active'> -->
+      <view class='mid-content'>
+         <template is="wxParse" data="{{wxParseData:article.nodes}}" /><!--解析content内容-->
+      </view>
+      <!-- </scroll-view> -->
+  </view><!--头部view-->
+<view class='mid-bg'></view>
+<!--尾部-->
+<view class='foot'>
+  <view class='foot-bar'></view>
+  <view class="foot-title">我们的业务</view>
+</view>
+<view class='foot-bg'></view>
+<block wx:for="{{yewu}}" wx:key="">
+<view>
+  <text class='foot-txt'>{{item.title}}</text>
+  <image class='foot-icon' src='../images/论坛/g_x_01.png'></image>
+  <view class='foot-bg'></view>
+</view>
+</block>
+
+<!--底部固定-->
+<view class="tabbar">
+  <button class="fix-call">
+    <image class='call-img' src='../images/首页/t-02.png'></image>
+    拨打热线</button>
+  <button class='fix-gps'>
+  <image class='call-img' src='../images/首页/t_03.png'></image>
+  导航</button>
+</view>
+</view>

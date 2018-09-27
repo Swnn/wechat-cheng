@@ -1,0 +1,22 @@
+<import src="../../utils/wxParse/wxParse.wxml" />
+<!--标题图片-->
+<view style='background-color:#f2f2f2; width:100%; height:422rpx'> 
+  <image src="../images/微信图片_20180702095948_03.png" class="head-img"/>  
+</view>
+<!--关于静卡-->
+<view class='section section_gap' wx:for="{{rec}}" wx:for-item="item" style='float:left;margin-top:30px'>
+  <image src="{{item.url}}" style='display:inline-block; width:12px;height:40px;margin-left:0px;' />
+  <view style='font-size:34rpx;float:right;margin:10px;'>{{item.txt}}</view>
+</view>
+<!--文字描述-->
+    <view class='mid-energy'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" /><!--解析content内容-->
+  </view>
+  <view class='section section_gap' wx:for="{{rec}}" wx:for-item="item" style='float:left;margin-top:30px'>
+  <image src="{{item.url}}" style='display:inline-block; width:12px;height:40px;margin-left:0px;' />
+  <view style='font-size:34rpx;float:right;margin:10px;'>{{item.txt1}}</view>
+</view>
+
+<view class='footer-text'>
+    <rich-text nodes="{{nodes}}" bindtap="tap"> </rich-text>
+</view>

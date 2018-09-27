@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<import src="../login/login_direct" />
+<import src="../../utils/wxParse/wxParse.wxml" />
+<view class='page'>
+       <view>
+         <swiper class='head-img' indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+         <block wx:for="{{lunbo}}" wx:key="">  
+           <swiper-item>  
+              <navigator url="" hover-class="navigator-hover"> 
+               <image src="{{item.image_url}}" class='head-img'></image>  
+              </navigator>  
+           </swiper-item>  
+         </block> 
+         </swiper>
+        </view>
+  <!--搜索框-->
+  <view class='search'>
+  <icon class='search-icon' type='search'></icon>
+  <input class='search-input' placeholder='请输入关键字搜索' bindtap='search'></input>
+  </view>
+  <view class='mid-bg'></view>
+
+<!--选项卡-->
+<scroll-view scroll-x class='nav'>
+   <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">项目分类</view> 
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" bindtap='forum'>论坛</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" bindtap='aboutour'>关于我们</view>
+</scroll-view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+    <!-- 项目分类开始 -->   
+    <!--小图标-->
+ <swiper-item class="swiper-item">
+  <view class='mid'>  
+  <block wx:for="{{xiangmu}}" wx:key="">
+    <view class="mid-item" style='display:inline-block'>
+      <navigator url="../xiangmu/xiangmu?id={{item.id}}" hover-class="navigator-hover"> 
+        <image src="{{item.picture}}" class='mid-img'/>  
+      </navigator>
+      <view class="classify">{{item.title}}</view>
+    </view>
+   </block>
+</view> 
+<view class='mid-bg'></view>
+    <!--广告招商标题开始-->
+
+<view class='foot'>
+  <view class='foot-bar'></view>
+  <view class="foot-txt">广告招商</view>
+</view>
+    <!--广告招商标题结束-->
+    <!--广告招商图片-->
+       <view class='guanggao'>
+         <swiper indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+         <block wx:for="{{guangao}}" wx:key="">  
+           <swiper-item>  
+              <navigator url="" hover-class="navigator-hover"> 
+               <image src="{{item.image_url}}"class="foot-img"></image>  
+              </navigator>  
+           </swiper-item>  
+         </block> 
+         </swiper>
+        </view>
+<view class='mid-bg'></view>
+
+    <!--项目分类结束-->
+    </swiper-item>
+   
+   <!-- 论坛 -->
+    <swiper-item></swiper-item>
+    <!-- 我的 -->
+    <swiper-item></swiper-item>
+    </swiper>
+</view>
+<!--底部固定-->
+<view class='tabbar'>
+  <button class="fix-call">
+    <image class='call-img' src='../images/首页/t-02.png'></image>
+    拨打热线</button>
+  <button class='fix-gps'>
+  <image class='call-img' src='../images/首页/t_03.png'></image>
+  导航</button>
+</view>

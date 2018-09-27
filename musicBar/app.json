@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/button/button",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "按钮事件",
+    "navigationBarTextStyle":"black"
+  }
+}

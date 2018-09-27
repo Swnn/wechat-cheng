@@ -1,0 +1,19 @@
+.head-img{
+  width:690rpx;
+  height:342rpx;
+  margin: 30rpx;
+}
+.mid-energy{
+  margin-top:200rpx;
+  padding: 10rpx;
+}
+.footer-text{
+  font-size: 28rpx;
+  margin-top: 170rpx;
+  margin-left:40rpx;
+  margin-right:40rpx
+}
+rich-text{
+  color:#858181;
+  line-height: 37rpx;
+}

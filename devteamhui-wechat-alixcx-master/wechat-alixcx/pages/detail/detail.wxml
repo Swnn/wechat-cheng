@@ -1,0 +1,101 @@
+<import src="../../utils/wxParse/wxParse.wxml" />
+<!--总高度-->
+<view>
+<!--第一部分-->
+ <view>
+     <view class='section__ctn'>
+         <swiper style='height:700rpx' indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">  
+         <block wx:for="{{images}}">  
+           <swiper-item>  
+               <image mode='aspectFill' src="{{item.url}}" style='width:100%;height:700rpx;' class="slide-image"/>  
+           </swiper-item>  
+         </block> 
+         </swiper>
+       </view> 
+    <!--标题和价格部分-->
+<view class='mid'> 
+  <view class='section section_gap' wx:for="{{rec}}" wx:for-item="item">
+    <image src="{{item.url}}" class='rec-icon'/>
+    <view class='rec-des'>{{title}}</view>
+  </view>
+
+  <view style='float:right;'>
+    <view class='pre-price'>原价 <view class='del-price'>￥518</view>
+    <view class='now-price'>{{energy}}能量</view></view>
+  </view>
+</view>  
+<!--标题和价格部分结束-->
+<view class='mid-text'>{{description}}</view>
+  <view class='mid-time'>
+    <image src='../images/时间.png' class='time-icon'/>
+    <text class='time-area'>周一至周日 18:00-05:00</text>
+  </view>
+    <view class='week'>
+      <block wx:for="{{time}}">
+         <image class='week-img' src="{{url}}" checked="{{item.checked}}"></image>
+         <text class='week-txt'>{{item.title}}</text>
+      </block>
+    </view>
+    <!-- <view class='week'>
+        <image class='week-img' src='../images/勾选 (1).png'></image>
+        <text class='week-txt'>星期一</text>
+    </view>
+        <view class='week'>
+        <image class='week-img' src='../images/勾选.png'></image>
+        <text class='week-txt'>星期二</text>
+    </view>
+        <view class='week'>
+        <image class='week-img' src='../images/勾选.png'></image>
+        <text class='week-txt'>星期三</text>
+    </view>
+        <view class='week'>
+        <image class='week-img' src='../images/勾选 (1).png'></image>
+        <text class='week-txt'>星期四</text>
+    </view>
+        <view class='week'>
+        <image class='week-img' src='../images/勾选 (1).png'></image>
+        <text class='week-txt'>星期五</text>
+    </view>
+        <view class='week'>
+        <image class='week-img' src='../images/勾选 (1).png'></image>
+        <text class='week-txt'>星期六</text>
+    </view>
+     <view class='week'>
+        <image class='week-img' src='../images/勾选 (1).png'></image>
+        <text class='week-txt'>星期日</text>
+    </view> -->
+  </view> 
+  <!--第二部分-->
+  <view class='local-bg'>
+  <view class='local-up'></view>
+  <view class='local-whitebg'>
+    <image src='../images/定位.png' class='local-icon'></image>
+    <view class='local-des'>
+      <view class='local-title'>{{shop_info_title}}</view>
+      <view class="local-address">{{address}}</view>
+    </view>
+      <image src='../images/上双箭头.png' class='right-icon'></image>
+   </view>
+   <view class='local-down'></view>
+  </view>
+<!--第三部分-->
+<view style='position:relative;'>
+  
+  <view class='foot-img'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" /><!--解析content内容-->
+  </view>
+
+  <view class='footer'>
+    <view class="footer-one">
+    <image class='footer-icon1' src='../images/客服.png'></image>
+    <view class='footer-icon-des'>客服</view>
+    </view>
+    <view class="footer-two">
+    <image class='footer-icon2' src='../images/收藏.png'></image> 
+    <view class='footer-icon-des'>已收藏</view>
+    </view>
+    <button class='footer-button'><text class="footer-pay">立即购买</text></button>   
+  </view>
+</view>
+</view>

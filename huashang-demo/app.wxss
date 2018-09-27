@@ -1,0 +1,39 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  padding-bottom: 98rpx;
+}
+.tabbar{
+  position: fixed;
+  bottom: 0rpx;
+  height: 85rpx;
+}
+.fix-call{
+  background-color: #ff5252;
+  width: 375rpx;
+  display: inline-block;
+  color: #ffffff;
+  position: relative;
+}
+.fix-gps{
+  background-color: #ffffff;
+  width: 375rpx; 
+  display: inline-block;
+  color: #666666;
+  position: relative;
+}
+.call-img{
+  width: 42rpx;
+  height: 48rpx;
+  position: absolute;
+  top:20rpx;
+  left: 60rpx;
+}

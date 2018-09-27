@@ -1,0 +1,24 @@
+<view class="boss">
+  <view class="txt">
+    <view class="boss-boss-pic">
+      <open-data type="userAvatarUrl" class="user_img"></open-data>
+      <!-- <image class='boss-pic' src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=124155087,2314196803&fm=27&gp=0.jpg"></image> -->
+    </view>
+  </view>
+</view>
+<view class='live'>
+  <view>
+    <open-data type="userNickName" class="user_name"></open-data>
+  </view>
+</view>
+<view class="boss-box">
+  <view class="line"> </view>
+  <view class="land">登录后该应用将获得以下权限</view>
+  <view class="public">●获得你的公开信息(昵称、头像等）</view>
+  <button class="size" type="primary" open-type='getUserInfo' bindgetuserinfo="get_user_info" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}"> 确认登录 </button>
+  <button class="size" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default" bindtap='home' hover-class="other-button-hover"> 取消 </button>
+</view>
+
+<view class="home" bindtap='home'>
+  首页
+</view>

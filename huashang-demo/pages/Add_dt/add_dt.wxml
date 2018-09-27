@@ -1,0 +1,13 @@
+  
+  
+  <view>
+    <input placeholder="动态内容" class='add_content' bindinput="input" ></input>
+    <view class='image' wx:for="{{img_url}}">
+      <image class="moment_img" src="{{item}}"></image>
+    </view>
+    <button bindtap='chooseImg' class='add_img'>上传图片</button>
+    <button bindtap='Add_dt' class='confirm'>发布</button>
+  </view>
+
+
+  

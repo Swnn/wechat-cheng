@@ -1,0 +1,38 @@
+
+<import src="../../utils/wxParse/wxParse.wxml" />
+<!--头部新闻滚动条开始-->
+<!-- <scroll-view scroll-y class='news-active'> -->
+  <view class='head-content'>
+     <template is="wxParse" data="{{wxParseData:article.nodes}}" /><!--解析content内容-->
+  </view>
+<!-- </scroll-view> -->
+<!--头部新闻滚动条结束-->
+  <view class='mid-bg'></view>
+
+<!--案例标题-->
+<view class='mid'>
+  <view class='mid-bar'></view>
+  <view class="mid-txt">项目案例</view>
+</view>
+<!--案例图片循环开始-->
+<view>
+ <block wx:for="{{anli}}" wx:key="">
+  <view class='anli'>
+    <image class='anli-img' src='{{item.img}}'></image>
+      <view class='anli-title-bg'>
+       <text class='anli-title'>{{item.title}}</text>
+      </view>
+  </view>
+ </block>
+
+</view>
+<!--底部固定-->
+<view class='tabbar'>
+  <button class="fix-call">
+    <image class='call-img' src='../images/首页/t-02.png'></image>
+    拨打热线</button>
+  <button class='fix-gps'>
+  <image class='call-img' src='../images/首页/t_03.png'></image>
+  导航</button>
+</view>
+<!--案例图片循环结束-->
